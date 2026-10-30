@@ -26,9 +26,7 @@ npm run docs:preview
 - `docs/.vitepress/config.mts`：サイト名・メニュー・目次・検索の設定。
 - `docs/.vitepress/theme/custom.css`：ブラウザ表示と印刷のCSS。
 - `docs/grade5/review.md`：5級の復習教材。今後の教材も級別フォルダに配置します。
-- `references/grade5/`・`grade4/`・`grade3/`：各級の参照資料。`past-exams/` に過去問、`vocabulary/` に単語帳を置きます。
-- `references/shared/`：複数級にまたがる参照資料。
-- `references/` 全体はGitとサイトの対象外です。空の資料フォルダはGitには保存されないため、別のPCでは必要に応じて作成してください。
+- `references/`：教材作成のための参照資料。Gitとサイトの対象外。
 - `context.md`：制作方針。サイトの対象外。
 
 教材を追加する場合は `docs/` に `.md` ファイルを置き、トップページと設定ファイルのメニューにリンクを追加します。見出しは `#` をページ名、`##` を大きな区切り、`###` を練習項目に使います。
