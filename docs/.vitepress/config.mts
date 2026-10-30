@@ -8,10 +8,10 @@ export default defineConfig({
   base: process.env.PAGES_BASE_PATH || '/',
   head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
   themeConfig: {
-    nav: [{ text: '教材一覧', link: '/' }, { text: '5級の復習', link: '/grade5-review' }],
+    nav: [{ text: '教材一覧', link: '/' }, { text: '5級の復習', link: '/grade5/review' }],
     sidebar: [{ text: '教材', items: [
       { text: 'この練習帳について', link: '/' },
-      { text: '5級 基本文型・語法の復習', link: '/grade5-review' }
+      { text: '5級 基本文型・語法の復習', link: '/grade5/review' }
     ] }],
     outline: { level: [2, 2], label: 'このページの目次' },
     search: { provider: 'local' },

@@ -1,5 +1,5 @@
-past-exams/
+references/
 .DS_Store
 node_modules/
-src/.vitepress/cache/
-src/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/dist/

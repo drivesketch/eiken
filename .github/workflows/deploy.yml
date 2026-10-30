@@ -31,7 +31,7 @@ jobs:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: src/.vitepress/dist
+          path: docs/.vitepress/dist
 
   deploy:
     needs: build

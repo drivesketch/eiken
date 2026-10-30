@@ -190,7 +190,7 @@
 
 ## 今後の作業
 
-まず `grade5-review.md` をレビューする。
+まず `docs/grade5/review.md` をレビューする。
 
 確認したいこと：
 
