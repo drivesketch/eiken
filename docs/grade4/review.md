@@ -37,7 +37,7 @@ pageClass: english-workbook
 | 12 | 総合復習② | お知らせとメールを読み、出来事・予定・理由を伝える |
 
 新しく確認するのは各課の中心となる表現です。すでに使った表現は、後の課にも繰り返し登場します。
-あやふやな形があれば、[5級の復習](../grade5/review.md)へ戻って、その部分だけ確認しても構いません。
+あやふやな形があれば、[5級の復習](../grade5/review.md)へ戻って、その部分だけ確認しても構いません。単語の意味は、[4級の単語・熟語](./vocabulary.md)でも確かめられます。
 
 ---
 
@@ -82,6 +82,7 @@ I came home at two and did my homework. In the evening, I watched a movie with m
 - `for an hour`：1時間のあいだ
 - `after that`：その後
 - `in the evening`：夕方に、夜に
+- `How long ...?`：どのくらいの時間〜。ここでは、サッカーをした時間を尋ねます。
 
 </details>
 
@@ -260,7 +261,7 @@ Yes / No で答えられる疑問文にしましょう。主語は変えませ�
 
 「過去のそのとき、〜しているところだった」は `was / were + 動詞の -ing形` で伝えます。
 
-> I did my homework last night.（昨夜、宿題をした）
+> I did my homework last night.（昨夜、宿題をした）<br>
 > I was doing my homework at seven.（7時には、宿題をしているところだった）
 
 `when ...` は、ここでは「〜したとき」です。`could / couldn't + 原形` では、過去にできたこと・できなかったことを伝えます。
@@ -740,6 +741,7 @@ Emi chose a book about birds. It was as thick as the blue book. I borrowed the b
 - `interesting`：おもしろい、興味深い
 - `choose → chose`：選ぶ → その過去形
 - `borrow`：借りる
+- `What kind of ...?`：どんな種類の〜
 
 </details>
 
@@ -1168,7 +1170,7 @@ Yuta and Emi are going to the science museum on Sunday. Yuta is looking at a map
 
 回数・頻度は `How often ...?`、続く時間は `How long ...?` で尋ねます。
 
-> How often do you practice? — Twice a week.
+> How often do you practice? — Twice a week.<br>
 > How long do you practice? — For an hour.
 
 `be good at + 名詞 / -ing形` は「〜が得意」です。
@@ -1177,7 +1179,7 @@ Yuta and Emi are going to the science museum on Sunday. Yuta is looking at a map
 
 理由を because で、結果を so でつなぐ練習もします。つなぐ順番に注目しましょう。
 
-> I practice because I want to become a better player.
+> I practice because I want to become a better player.<br>
 > I want to become a better player, so I practice.
 
 ### Read Aloud
@@ -1453,7 +1455,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I went to the library yesterday.
+> I went to the library yesterday.<br>
 > I didn't watch TV yesterday.
 
 ### Lesson 2 — At the Park Yesterday
@@ -1488,7 +1490,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I was at home yesterday afternoon.
+> I was at home yesterday afternoon.<br>
 > I was happy.
 
 ### Lesson 3 — At Seven Last Night
@@ -1523,7 +1525,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> At eight last night, I was watching TV.
+> At eight last night, I was watching TV.<br>
 > My mother was reading a book.
 
 ### Lesson 4 — Plans for Sunday
@@ -1558,7 +1560,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I'm going to visit my friend on Sunday.
+> I'm going to visit my friend on Sunday.<br>
 > I'll carry your bag.
 
 ### Lesson 5 — Review 1 — Three Sundays
@@ -1594,8 +1596,8 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I usually play soccer on Sundays.
-> I stayed at home last Sunday.
+> I usually play soccer on Sundays.<br>
+> I stayed at home last Sunday.<br>
 > I'm going to visit my grandmother next Sunday.
 
 ### Lesson 6 — I Want to Cook
@@ -1630,7 +1632,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I want to play tennis.
+> I want to play tennis.<br>
 > I need to practice with my friend.
 
 ### Lesson 7 — Choosing Books
@@ -1665,7 +1667,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I enjoy reading.
+> I enjoy reading.<br>
 > My English book is thinner than my science book.
 
 ### Lesson 8 — At the Town Library
@@ -1700,7 +1702,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> We mustn't run in the library.
+> We mustn't run in the library.<br>
 > You should eat breakfast.
 
 ### Lesson 9 — Getting Ready for a Birthday
@@ -1735,8 +1737,8 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> Could you help me with my homework?
-> May I use your pen?
+> Could you help me with my homework?<br>
+> May I use your pen?<br>
 > I gave my friend a card.
 
 ### Lesson 10 — Finding the Science Museum
@@ -1772,7 +1774,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I go to school by bus.
+> I go to school by bus.<br>
 > It takes twenty minutes to get to school.
 
 ### Lesson 11 — Basketball Practice
@@ -1807,7 +1809,7 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I read books every day.
+> I read books every day.<br>
 > I read for thirty minutes after dinner.
 
 ### Lesson 12 — Review 2 — A School Picnic
@@ -1843,8 +1845,8 @@ Change! は例です。特に場面から自分で作る問題には、ほかに
 
 #### 自分のこと — 例
 
-> I played tennis last Sunday.
-> I'm going to play tennis again next Sunday.
+> I played tennis last Sunday.<br>
+> I'm going to play tennis again next Sunday.<br>
 > Do you want to join me?
 
 ---
