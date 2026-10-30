@@ -26,7 +26,6 @@ npm run docs:preview
 - `src/.vitepress/config.mts`：サイト名・メニュー・目次・検索の設定。
 - `src/.vitepress/theme/custom.css`：ブラウザ表示と印刷のCSS。
 - `context.md`：制作方針。サイトの対象外。
-- `past-exams/`：過去問。Git・サイトの対象外。
 
 教材を追加する場合は `src/` に `.md` ファイルを置き、トップページと設定ファイルのメニューにリンクを追加します。見出しは `#` をページ名、`##` を大きな区切り、`###` を練習項目に使います。
 
