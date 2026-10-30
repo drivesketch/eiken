@@ -1,3 +1,7 @@
+---
+pageClass: english-workbook
+---
+
 # 英検5級 基本文型・語法 統合復習
 
 ## この教材の使い方
@@ -17,14 +21,25 @@
 
 1. 本文を意味を考えながら音読する
 2. 2〜4文ずつ、紙を見ずに言ってみる
-3. 本文を伏せて Questions に答える
+3. 本文を伏せ、保護者などに Questions を読み上げてもらって答える
 4. Change! で英文の一部を変える
 
 全文を一字一句暗唱する必要はありません。
 
+Questions は短い答えでも構いません。慣れたら、主語と動詞を含む文でも答えてみましょう。
+解答例と違う答えでも、内容が合っていて英文が正しければ大丈夫です。
+
+本文の `I` は、各 Passage の冒頭で紹介する話し手を指します。
+Questions では、その人の名前や `he`、`his` を使って尋ねます。
+
+Change! は、指定された部分と、それに伴って必要な語形を変える練習です。
+本文とは違う内容の文になっても構いません。
+
 ---
 
 ## Passage 1 — My School Day
+
+ユウタ（Yuta）という男の子の話です。
 
 ### Read Aloud
 
@@ -42,30 +57,32 @@ I do my homework after dinner. Then I read a book.
 
 ### Questions
 
-1. What time does he get up?
-2. Who does he have breakfast with?
-3. How does he go to school?
+1. What time does Yuta get up?
+2. Who does Yuta have breakfast with?
+3. How does Yuta go to school?
 4. What does Ken like?
-5. What does he often do after school?
-6. When does he do his homework?
+5. What does Yuta often do after school?
+6. When does Yuta do his homework?
 
 ### Change!
 
 #### 1
 
-`walk → by train`
+「歩いて」から「電車で」に変えましょう。動詞も必要に応じて変えます。
+
+`walk to school → go to school by train`
 
 > I walk to school.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 2
 
-`Ken → my sister / math → music`
+`I → Ken`
 
-> My friend Ken likes math very much.
+> I like English and science.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 3
 
@@ -73,11 +90,13 @@ I do my homework after dinner. Then I read a book.
 
 > I often play soccer after school.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 ---
 
 ## Passage 2 — My Family
+
+ユウタ（Yuta）の家族の話です。
 
 ### Read Aloud
 
@@ -95,11 +114,11 @@ I often take pictures with it.
 
 ### Questions
 
-1. How old is his sister?
-2. What does his sister like?
-3. What can she play?
-4. Where does his father work?
-5. What does his mother teach?
+1. How old is Yuta's sister?
+2. What does Yuta's sister like?
+3. What can Yuta's sister play?
+4. Where does Yuta's father work?
+5. What does Yuta's mother teach?
 6. Whose piano is it?
 7. Whose camera is it?
 
@@ -107,31 +126,33 @@ I often take pictures with it.
 
 #### 1
 
-`sister → brother`
+否定文にしましょう。「〜ではありません」と伝えます。
 
 > My sister is seven years old.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 2
 
-`music → tennis`
+否定文にしましょう。「〜が好きではありません」と伝えます。
 
 > She likes music.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 3
 
-Make a question.
+Yes / No で答えられる疑問文にしましょう。主語は変えません。
 
 > His father works at a hospital.
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ---
 
 ## Passage 3 — A Rainy Afternoon
+
+雨の日の、ユウタ（Yuta）の家での様子です。
 
 ### Read Aloud
 
@@ -148,23 +169,23 @@ After dinner, I can play a computer game with my sister.
 
 ### Questions
 
-1. Why are they at home?
-2. What is the boy doing?
-3. What is his sister doing?
-4. Where is his father?
-5. What is his father doing?
-6. Where is the dog?
-7. Can the boy play soccer outside today?
+1. Why are Yuta and his family at home?
+2. What is Yuta doing?
+3. What is Yuta's sister doing?
+4. Where is Yuta's father?
+5. What is Yuta's father doing?
+6. Where is Yuta's dog?
+7. Can Yuta play soccer outside today?
 
 ### Change!
 
 #### 1
 
-`my sister / read → my brother / study English`
+`my sister → my brother / read a book → study English`
 
 > My sister is reading a book.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 2
 
@@ -172,15 +193,15 @@ After dinner, I can play a computer game with my sister.
 
 > Our dog is sleeping under the table.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 3
 
-Make a question.
+「彼のお父さんは何をしていますか」と尋ねる疑問文にしましょう。
 
 > His father is making dinner.
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ---
 
@@ -190,17 +211,17 @@ Make a question.
 
 **Clerk:** Hello.
 
-**Tom:** Excuse me. I want a T-shirt.
+**Tom:** Excuse me. Can I see that blue T-shirt?
 
-**Clerk:** How about this blue one?
+**Clerk:** Sure. Here you are.
 
-**Tom:** I like it. How much is it?
+**Tom:** Thank you. I like it. How much is it?
 
 **Clerk:** It's twelve dollars.
 
-**Tom:** Can I buy this one?
+**Tom:** This one, please.
 
-**Clerk:** Sure.
+**Clerk:** Here you are.
 
 **Tom:** Thank you.
 
@@ -208,7 +229,7 @@ Make a question.
 
 ### Questions
 
-1. What does Tom want?
+1. What does Tom want to see?
 2. What color is the T-shirt?
 3. Does Tom like it?
 4. How much is it?
@@ -216,7 +237,7 @@ Make a question.
 
 ### Change!
 
-Change the conversation and say it again.
+指定された品物・色・値段に変えて、会話をもう一度言ってみましょう。
 
 #### Version A
 
@@ -232,23 +253,26 @@ Change the conversation and say it again.
 
 ### Quick Response
 
+本文の表現や、買い物で使う短いやり取りを練習します。
 答えを見ずに、すぐ返しましょう。
 
 **Thank you.**
 
-→ ______________________
+<p class="answer-line answer-line-short">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 **How about this blue one?**
 
-→ ______________________
+<p class="answer-line answer-line-short">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-**Can I buy this one?**
+**Can I see that blue T-shirt?**
 
-→ ______________________
+<p class="answer-line answer-line-short">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 ---
 
 ## Passage 5 — After School with Ken
+
+ユウタ（Yuta）と友達のケン（Ken）の話です。会話の Yuta は本文の `I` と同じ人です。
 
 ### Read Aloud
 
@@ -264,19 +288,21 @@ On Friday, Ken comes to my house.
 
 **Ken:** Can we play soccer today?
 
-**Me:** Sure. Let's play in the park.
+**Yuta:** Sure. Let's play in the park.
 
 **Ken:** Good idea!
+
+We play soccer in the park.
 
 ### Questions
 
 1. What sport does Ken play?
-2. When does he play tennis?
-3. What sport does the boy play?
-4. Where do they sometimes study?
+2. When does Ken play tennis?
+3. What sport does Yuta play?
+4. Where do Yuta and Ken sometimes study?
 5. What does Ken like?
-6. What does the boy like?
-7. Where do they play soccer on Friday?
+6. What does Yuta like?
+7. Where do Yuta and Ken play soccer on Friday?
 
 ### Change!
 
@@ -286,7 +312,7 @@ On Friday, Ken comes to my house.
 
 > Ken plays tennis on Tuesdays.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 2
 
@@ -294,23 +320,27 @@ On Friday, Ken comes to my house.
 
 > We sometimes study together in my room.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 3
 
-Make questions.
+次の文を、Yes / No で答えられる疑問文にしましょう。主語は変えません。
 
 > Ken likes math.
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 > They study together.
 
-→ Where __________________________________ ?
+この文から、`Where` で始めて「彼らはどこで一緒に勉強しますか」と尋ねる疑問文を作りましょう。
+
+<p class="answer-line">→ Where <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ---
 
 ## Passage 6 — School Festival
+
+ハル（Haru）という男の子の、学校のお祭りの話です。会話の Haru は本文の `I` と同じ人です。
 
 ### Read Aloud
 
@@ -329,24 +359,26 @@ Tom has a blue bag, and mine is black.
 
 **Tom:** Are you hungry?
 
-**Me:** Yes, I am.
+**Haru:** Yes, I am.
 
 **Tom:** Let's have lunch.
 
-**Me:** Good idea!
+**Haru:** Good idea!
+
+We have lunch together.
 
 ### Questions
 
 1. When is the school festival?
 2. What time does it start?
-3. Who comes to the school every year?
-4. What can his sister play?
-5. Where is she playing?
-6. What are his mother and father doing?
-7. Where are the boy and Tom?
+3. Who comes to Haru's school every year?
+4. What can Haru's sister play?
+5. Where is Haru's sister playing?
+6. What are Haru's mother and father doing?
+7. Where are Haru and Tom?
 8. What color is Tom's bag?
-9. What color is the boy's bag?
-10. What do the boys do at the end?
+9. What color is Haru's bag?
+10. What do Haru and Tom do at the end?
 
 ### Change!
 
@@ -356,7 +388,7 @@ Tom has a blue bag, and mine is black.
 
 > My sister can play the piano.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 2
 
@@ -364,122 +396,125 @@ Tom has a blue bag, and mine is black.
 
 > Tom has a blue bag.
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 3
 
-Change the action.
+主語と動作を変えましょう。主語に合わせて be動詞も変えます。
 
 > My mother and father are watching her.
 
-`read books`
+`My mother and father → My father / watch her → read books`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 #### 4
 
-Change the conversation.
+サッカーに誘う会話に変えましょう。誘いに合うように、最初の質問も変えます。
 
 > Are you hungry?  
 > Yes, I am.  
 > Let's have lunch.  
 > Good idea!
 
-Use:
-
 `play soccer`
 
-and make a new short conversation.
+<p class="answer-line"><span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-________________________________________
+<p class="answer-line"><span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-________________________________________
+<p class="answer-line"><span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-________________________________________
-
-________________________________________
+<p class="answer-line"><span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 ---
 
 ## Final Check
 
-本文を見ずに答えてみましょう。
+本文を見ずに答えてみましょう。語句や例文から文を作り、日本語の指示に合わせて質問も作ります。
+相手に尋ねる問題では、話し手の `my` / `I` から、相手を指す `your` / `you` に切り替えましょう。
 
 ### Present Simple
 
 `my sister / like music`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`question`
+相手の妹が音楽を好きか、Yes / No で答えられる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Third Person
 
-`Ken / play tennis`
+主語を `I → Ken` に変えましょう。
 
-→ ________________________________________
+> I play tennis.
+
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
 ### Can
 
 `my sister / play piano`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`question`
+相手の妹がピアノを弾けるか、Yes / No で答えられる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Present Progressive
 
 `my father / make dinner / now`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`question`
+相手のお父さんが今何をしているか、`What` で始まる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Do / Does
 
+それぞれ、Yes / No で答えられる疑問文を作りましょう。
+
 `you / like soccer`
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 `your brother / like soccer`
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Place
 
 `book / on the desk`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`question`
+その本がどこにあるか、`Where` で始まる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Time
 
+主語を `I` にして文を作りましょう。
+
 `get up / seven`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`question`
+相手が何時に起きるか、`What time` で始まる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ### Possession
 
 `this bag / mine`
 
-→ ________________________________________
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span></p>
 
-`whose`
+そのかばんの持ち主を、`Whose` で始まる疑問文で尋ねましょう。
 
-→ ________________________________________ ?
+<p class="answer-line">→ <span class="answer-blank" role="img" aria-label="解答欄"></span> ?</p>
 
 ---
 
@@ -497,7 +532,7 @@ ________________________________________
 #### Change! Examples
 
 1. I go to school by train.
-2. My sister likes music very much.
+2. Ken likes English and science.
 3. I often play soccer on Sundays.
 
 ---
@@ -509,13 +544,13 @@ ________________________________________
 3. The piano.
 4. At a hospital.
 5. English.
-6. His sister's.
-7. His.
+6. It's Yuta's sister's.
+7. It's Yuta's.
 
 #### Change! Examples
 
-1. My brother is seven years old.
-2. She likes tennis.
+1. My sister isn't seven years old. / My sister is not seven years old.
+2. She doesn't like music. / She does not like music.
 3. Does his father work at a hospital?
 
 ---
@@ -546,6 +581,48 @@ ________________________________________
 4. Twelve dollars.
 5. The blue one.
 
+#### Change! Examples
+
+##### Version A
+
+**Clerk:** Hello.
+
+**Tom:** Excuse me. Can I see that red bag?
+
+**Clerk:** Sure. Here you are.
+
+**Tom:** Thank you. I like it. How much is it?
+
+**Clerk:** It's fifteen dollars.
+
+**Tom:** This one, please.
+
+**Clerk:** Here you are.
+
+**Tom:** Thank you.
+
+**Clerk:** You're welcome.
+
+##### Version B
+
+**Clerk:** Hello.
+
+**Tom:** Excuse me. Can I see that black hat?
+
+**Clerk:** Sure. Here you are.
+
+**Tom:** Thank you. I like it. How much is it?
+
+**Clerk:** It's ten dollars.
+
+**Tom:** This one, please.
+
+**Clerk:** Here you are.
+
+**Tom:** Thank you.
+
+**Clerk:** You're welcome.
+
 #### Quick Response Examples
 
 **Thank you.**  
@@ -554,8 +631,9 @@ ________________________________________
 **How about this blue one?**  
 → I like it.
 
-**Can I buy this one?**  
-→ Sure.
+**Can I see that blue T-shirt?**
+
+→ Sure. Here you are.
 
 ---
 
@@ -564,7 +642,7 @@ ________________________________________
 1. Tennis.
 2. On Tuesdays.
 3. Soccer.
-4. In the boy's room.
+4. In Yuta's room.
 5. Math.
 6. English.
 7. In the park.
@@ -582,10 +660,10 @@ ________________________________________
 
 1. On Saturday.
 2. At ten in the morning.
-3. His family.
+3. Haru's family.
 4. The piano.
 5. In the gym.
-6. They are watching his sister.
+6. They are watching Haru's sister.
 7. In their classroom.
 8. Blue.
 9. Black.
@@ -595,7 +673,7 @@ ________________________________________
 
 1. My brother can play the guitar.
 2. Ken has a red bag.
-3. My mother and father are reading books.
+3. My father is reading books.
 
 #### Conversation Example
 
@@ -669,13 +747,23 @@ ________________________________________
 ### 2回目
 
 - 2〜4文ずつ見ないで言う
-- Questions に本文を見ずに答える
+- 保護者などに Questions を読み上げてもらい、本文と質問を見ずに答える
+- 慣れたら質問の順番を変えてもらう
 
 ### 3回目
 
 - 全文をもう一度音読する
 - Change! を口頭で行う
-- 難なくできれば次の Passage へ進む
+- Questions と Change! の両方で、ヒントなしに答えられるか確認する
+
+### 次へ進む目安
+
+- 質問を耳で聞いて、大半に数秒で答え始められる
+- Change! で、主語に合わせた動詞の形や疑問文・否定文を、ヒントなしで作れる
+- 別の日に Questions と Change! を数問ずつ出してもらい、同じように答えられる
+
+答えに詰まったところだけ、本文や解答例を確認してもう一度練習しましょう。
+聞き取れなかった質問は、もう一度読んでもらって構いません。
 
 すでに簡単にできる Passage は、1回だけで次へ進んでも構いません。
 
