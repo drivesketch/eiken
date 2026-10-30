@@ -8,10 +8,13 @@ export default defineConfig({
   base: process.env.PAGES_BASE_PATH || '/',
   head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
   themeConfig: {
-    nav: [{ text: '教材一覧', link: '/' }, { text: '5級の復習', link: '/grade5/review' }],
+    nav: [{ text: '教材一覧', link: '/' }, { text: '5級の復習', link: '/grade5/review' }, { text: '5級の単語', link: '/grade5/vocabulary' }, { text: '4級の復習', link: '/grade4/review' }, { text: '4級の単語', link: '/grade4/vocabulary' }],
     sidebar: [{ text: '教材', items: [
       { text: 'この練習帳について', link: '/' },
-      { text: '5級 基本文型・語法の復習', link: '/grade5/review' }
+      { text: '5級 基本文型・語法の復習', link: '/grade5/review' },
+      { text: '5級 単語・熟語', link: '/grade5/vocabulary' },
+      { text: '4級 基本文型・語法の復習', link: '/grade4/review' },
+      { text: '4級 単語・熟語', link: '/grade4/vocabulary' }
     ] }],
     outline: { level: [2, 2], label: 'このページの目次' },
     search: { provider: 'local' },

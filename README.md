@@ -26,10 +26,17 @@ npm run docs:preview
 - `docs/.vitepress/config.mts`：サイト名・メニュー・目次・検索の設定。
 - `docs/.vitepress/theme/custom.css`：ブラウザ表示と印刷のCSS。
 - `docs/grade5/review.md`：5級の復習教材。今後の教材も級別フォルダに配置します。
+- `docs/grade4/review.md`：4級の復習教材。全12課で、説明・本文・日本語訳・質問・言い換え・自分の話・解答をそろえています。
+- `docs/grade5/vocabulary.md`：5級の単語学習ページ。訳の個別・一括表示、分類・検索・表示件数の切り替えに対応。
+- `content/grade5/vocabulary.md`：単語学習の元データ。番号・英語・日本語のMarkdown表で全600項目を管理します。サイトのページにはなりません。
+- `docs/grade4/vocabulary.md`：4級の単語学習ページ。5級と同じ共通コンポーネントを使います。
+- `content/grade4/vocabulary.md`：4級の元データ。全700項目を管理し、参照PDF間の同じ番号の重複は一度だけ収録します。
 - `references/`：教材作成のための参照資料。Gitとサイトの対象外。
 - `context.md`：制作方針。サイトの対象外。
 
 教材を追加する場合は `docs/` に `.md` ファイルを置き、トップページと設定ファイルのメニューにリンクを追加します。見出しは `#` をページ名、`##` を大きな区切り、`###` を練習項目に使います。
+
+単語・訳の修正は `content/grade5/vocabulary.md` または `content/grade4/vocabulary.md` を編集します。各級の `vocabulary.data.ts` から共通の `docs/.vitepress/vocabulary-loader.ts` を使ってビルド時に表を読み取り、分類別の件数と番号の連続性を検証します。重複・欠番・空欄があるとビルドは失敗します。学習画面は共通の `VocabularyStudy.vue` で表示し、PDF自体は配信しません。
 
 ## GitHub Pagesの初回設定
 
