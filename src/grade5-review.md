@@ -24,8 +24,7 @@
 
 ---
 
-# Passage 1
-## My School Day
+## Passage 1 — My School Day
 
 ### Read Aloud
 
@@ -78,8 +77,7 @@ I do my homework after dinner. Then I read a book.
 
 ---
 
-# Passage 2
-## My Family
+## Passage 2 — My Family
 
 ### Read Aloud
 
@@ -133,8 +131,7 @@ Make a question.
 
 ---
 
-# Passage 3
-## A Rainy Afternoon
+## Passage 3 — A Rainy Afternoon
 
 ### Read Aloud
 
@@ -187,8 +184,7 @@ Make a question.
 
 ---
 
-# Passage 4
-## At the Store
+## Passage 4 — At the Store
 
 ### Read Aloud
 
@@ -252,8 +248,7 @@ Change the conversation and say it again.
 
 ---
 
-# Passage 5
-## After School with Ken
+## Passage 5 — After School with Ken
 
 ### Read Aloud
 
@@ -315,8 +310,7 @@ Make questions.
 
 ---
 
-# Passage 6
-## School Festival
+## Passage 6 — School Festival
 
 ### Read Aloud
 
@@ -407,11 +401,11 @@ ________________________________________
 
 ---
 
-# Final Check
+## Final Check
 
 本文を見ずに答えてみましょう。
 
-## Present Simple
+### Present Simple
 
 `my sister / like music`
 
@@ -421,13 +415,13 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Third Person
+### Third Person
 
 `Ken / play tennis`
 
 → ________________________________________
 
-## Can
+### Can
 
 `my sister / play piano`
 
@@ -437,7 +431,7 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Present Progressive
+### Present Progressive
 
 `my father / make dinner / now`
 
@@ -447,7 +441,7 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Do / Does
+### Do / Does
 
 `you / like soccer`
 
@@ -457,7 +451,7 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Place
+### Place
 
 `book / on the desk`
 
@@ -467,7 +461,7 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Time
+### Time
 
 `get up / seven`
 
@@ -477,7 +471,7 @@ ________________________________________
 
 → ________________________________________ ?
 
-## Possession
+### Possession
 
 `this bag / mine`
 
@@ -489,9 +483,9 @@ ________________________________________
 
 ---
 
-# Answer Key
+## Answer Key
 
-## Passage 1
+### Passage 1
 
 1. At seven.
 2. With his mother.
@@ -500,7 +494,7 @@ ________________________________________
 5. He often plays soccer with his friends.
 6. After dinner.
 
-### Change! Examples
+#### Change! Examples
 
 1. I go to school by train.
 2. My sister likes music very much.
@@ -508,7 +502,7 @@ ________________________________________
 
 ---
 
-## Passage 2
+### Passage 2
 
 1. She is seven years old.
 2. Music.
@@ -518,7 +512,7 @@ ________________________________________
 6. His sister's.
 7. His.
 
-### Change! Examples
+#### Change! Examples
 
 1. My brother is seven years old.
 2. She likes tennis.
@@ -526,7 +520,7 @@ ________________________________________
 
 ---
 
-## Passage 3
+### Passage 3
 
 1. Because it is raining.
 2. He is doing his homework.
@@ -536,7 +530,7 @@ ________________________________________
 6. Under the table.
 7. No, he can't.
 
-### Change! Examples
+#### Change! Examples
 
 1. My brother is studying English.
 2. Our cat is sleeping on the chair.
@@ -544,7 +538,7 @@ ________________________________________
 
 ---
 
-## Passage 4
+### Passage 4
 
 1. A T-shirt.
 2. Blue.
@@ -552,7 +546,7 @@ ________________________________________
 4. Twelve dollars.
 5. The blue one.
 
-### Quick Response Examples
+#### Quick Response Examples
 
 **Thank you.**  
 → You're welcome.
@@ -565,7 +559,7 @@ ________________________________________
 
 ---
 
-## Passage 5
+### Passage 5
 
 1. Tennis.
 2. On Tuesdays.
@@ -575,7 +569,7 @@ ________________________________________
 6. English.
 7. In the park.
 
-### Change! Examples
+#### Change! Examples
 
 1. Emi plays basketball on Tuesdays.
 2. We sometimes study together at school.
@@ -584,7 +578,7 @@ ________________________________________
 
 ---
 
-## Passage 6
+### Passage 6
 
 1. On Saturday.
 2. At ten in the morning.
@@ -597,13 +591,13 @@ ________________________________________
 9. Black.
 10. They have lunch.
 
-### Change! Examples
+#### Change! Examples
 
 1. My brother can play the guitar.
 2. Ken has a red bag.
 3. My mother and father are reading books.
 
-### Conversation Example
+#### Conversation Example
 
 > A: Can we play soccer?  
 > B: Sure.  
@@ -612,7 +606,7 @@ ________________________________________
 
 ---
 
-# Final Check — Example Answers
+## Final Check — Example Answers
 
 ### Present Simple
 
@@ -662,7 +656,7 @@ ________________________________________
 
 ---
 
-# 進め方の目安
+## 進め方の目安
 
 1本につき2〜3回程度の練習を基本とします。
 
