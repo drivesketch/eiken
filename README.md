@@ -27,16 +27,18 @@ npm run docs:preview
 - `docs/.vitepress/theme/custom.css`：ブラウザ表示と印刷のCSS。
 - `docs/grade5/review.md`：5級の復習教材。今後の教材も級別フォルダに配置します。
 - `docs/grade4/review.md`：4級の復習教材。全12課で、説明・本文・日本語訳・質問・言い換え・自分の話・解答をそろえています。
-- `docs/grade5/vocabulary.md`：5級の単語学習ページ。訳の個別・一括表示、分類・検索・表示件数の切り替えに対応。
+- `docs/grade5/vocabulary.md`：5級の単語学習ページ。訳の個別・一括表示、分類の切り替えに対応。1ページ50項目で固定。
 - `content/grade5/vocabulary.md`：単語学習の元データ。番号・英語・日本語のMarkdown表で全600項目を管理します。サイトのページにはなりません。
 - `docs/grade4/vocabulary.md`：4級の単語学習ページ。5級と同じ共通コンポーネントを使います。
 - `content/grade4/vocabulary.md`：4級の元データ。全700項目を管理し、参照PDF間の同じ番号の重複は一度だけ収録します。
+- `docs/grade3/vocabulary.md`：3級の単語学習ページ。Sectionの選択、訳の表示切り替えに対応。1ページ50項目で固定。
+- `content/grade3/vocabulary.md`：3級の元データ。単語900・熟語300の全1,200項目を12SectionのMarkdown表で管理します。参照PDF前半の問題用ページは重複収録しません。
 - `references/`：教材作成のための参照資料。Gitとサイトの対象外。
 - `context.md`：制作方針。サイトの対象外。
 
 教材を追加する場合は `docs/` に `.md` ファイルを置き、トップページと設定ファイルのメニューにリンクを追加します。見出しは `#` をページ名、`##` を大きな区切り、`###` を練習項目に使います。
 
-単語・訳の修正は `content/grade5/vocabulary.md` または `content/grade4/vocabulary.md` を編集します。各級の `vocabulary.data.ts` から共通の `docs/.vitepress/vocabulary-loader.ts` を使ってビルド時に表を読み取り、分類別の件数と番号の連続性を検証します。重複・欠番・空欄があるとビルドは失敗します。学習画面は共通の `VocabularyStudy.vue` で表示し、PDF自体は配信しません。
+単語・訳の修正は、対象級の `content/grade5/vocabulary.md`・`content/grade4/vocabulary.md`・`content/grade3/vocabulary.md` を編集します。各級の `vocabulary.data.ts` から共通の `docs/.vitepress/vocabulary-loader.ts` を使ってビルド時に表を読み取り、分類別の件数と番号の連続性を検証します。重複・欠番・空欄があるとビルドは失敗します。学習画面は共通の `VocabularyStudy.vue` で表示し、PDF自体は配信しません。
 
 ## GitHub Pagesの初回設定
 
@@ -64,3 +66,9 @@ git push -u origin main
 
 - https://vitepress.dev/guide/deploy
 - https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+
+## 文型・語法の画面切り替え
+
+復習教材は各級1つの `review.md` のまま編集します。ウェブでは「表示する内容」から課を選び、「前へ・次へ」で移動できます。各課の解答は折りたたみで表示されます。「全体を表示」でまとめて読む・印刷することもできます。印刷したい解答や日本語訳は先に開いてください。
+
+表示の分割は `docs/.vitepress/workbook-pages.ts`、操作画面は `WorkbookPager.vue` が担当します。`## Passage N` / `## Lesson N` と、`## Answer Key` 内の対応する `### Passage N` / `### Lesson N` を番号で対応付けています。
