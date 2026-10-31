@@ -11,7 +11,7 @@ import VocabularyStudy from '../.vitepress/theme/components/VocabularyStudy.vue'
 
 # 英検3級 単語・熟語
 
-英語を声に出して、意味を思い出そう。迷ったら「訳を見る」で確かめよう。
+英語を声に出して、意味を思い出そう。迷ったら「訳を表示」で確かめよう。
 
 <VocabularyStudy :groups="data" />
 
@@ -19,7 +19,7 @@ import VocabularyStudy from '../.vitepress/theme/components/VocabularyStudy.vue'
 まずはSectionを選び、50項目ずつ、英語を読んで日本語の意味を答えてみましょう。
 Section 1～9は単語900項目、Section 10～12は熟語300項目です。
 「日本語訳を表示」をONにすると、表示中の範囲の訳をまとめて確認できます。
-初期状態はOFFです。単語ごとの「訳を見る」も使えます。
+初期状態はOFFです。単語ごとの「訳を表示」も使えます。
 分類や範囲を切り替えると、訳はもう一度隠れます。
 
 1ページに50項目ずつ表示します。前後の矢印や範囲のメニューでページを切り替えられます。

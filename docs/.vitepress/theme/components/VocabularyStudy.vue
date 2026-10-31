@@ -106,9 +106,21 @@ function toggleTranslations() {
           <td>
             <button type="button" class="vocab-answer" :class="{ 'is-revealed': revealed.has(entry.id) }"
               :aria-expanded="revealed.has(entry.id)" :aria-controls="`vocab-answer-${entry.id}`"
-              :aria-label="`${entry.english} の訳を${revealed.has(entry.id) ? '隠す' : '見る'}`" @click="toggle(entry.id)">
-              <span v-if="!revealed.has(entry.id)" class="vocab-answer-prompt">訳を見る <span aria-hidden="true">＋</span></span>
+              :aria-label="revealed.has(entry.id) ? `${entry.english}：${entry.meaning}。訳を隠す` : `${entry.english} の訳を表示`" @click="toggle(entry.id)">
+              <span v-if="!revealed.has(entry.id)" class="vocab-answer-prompt">訳を表示</span>
               <span :id="`vocab-answer-${entry.id}`" class="vocab-meaning" :hidden="!revealed.has(entry.id)">{{ entry.meaning }}</span>
+              <span class="vocab-answer-action" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <template v-if="revealed.has(entry.id)">
+                    <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.2A10.7 10.7 0 0 1 12 5c6 0 10 7 10 7a18.9 18.9 0 0 1-3.1 3.9M6.1 6.1A19.5 19.5 0 0 0 2 12s4 7 10 7a10.4 10.4 0 0 0 5-1.3" />
+                  </template>
+                  <template v-else>
+                    <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </template>
+                </svg>
+                <span v-if="revealed.has(entry.id)">隠す</span>
+              </span>
             </button>
           </td>
         </tr>
@@ -165,11 +177,11 @@ function toggleTranslations() {
 .vocab-word-number { display: inline-block; width: 34px; margin-right: 8px; vertical-align: baseline; font-size: 11px; font-weight: 400; color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
 .vocab-word { font-family: Arial, sans-serif; font-size: 20px; overflow-wrap: anywhere; }
 .vocab-table tbody td { padding: 6px 0 6px 8px; }
-.vocab-answer { display: block; width: 100%; min-height: 44px; padding: 8px 12px; border-radius: 6px; text-align: left; line-height: 1.7; }
-.vocab-answer:not(.is-revealed) { background: var(--vp-c-bg-soft); color: var(--vp-c-brand-1); }
-.vocab-answer-prompt { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
-.vocab-answer-prompt > span { font-size: 18px; }
-.vocab-meaning { color: var(--vp-c-text-1); overflow-wrap: anywhere; }
+.vocab-answer { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg-soft); color: var(--vp-c-brand-1); text-align: left; line-height: 1.7; }
+.vocab-answer-prompt { font-size: 13px; }
+.vocab-answer-action { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; font-size: 12px; white-space: nowrap; }
+.vocab-answer-action svg { width: 18px; height: 18px; }
+.vocab-meaning { min-width: 0; color: var(--vp-c-text-1); overflow-wrap: anywhere; }
 .vocab-answer:hover { box-shadow: inset 0 0 0 1px var(--vp-c-brand-1); }
 .vocab-bottom-pagination { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 20px; font-size: 13px; }
 .vocab-bottom-pagination button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; }
@@ -188,14 +200,14 @@ function toggleTranslations() {
   .vocab-word { font-size: 19px; }
   .vocab-table thead th:first-child { width: 44%; }
   .vocab-table tbody td { padding-left: 6px; }
-  .vocab-answer { font-size: 14px; padding: 8px; }
+  .vocab-answer { gap: 8px; font-size: 14px; padding: 8px; }
   .vocab-bottom-pagination button { padding: 8px; font-size: 12px; }
 }
 @media print {
   .vocab-categories, .vocab-category-picker, .vocab-pagination, .vocab-actions, .vocab-bottom-pagination { display: none; }
-  .vocab-answer-prompt { display: none; }
+  .vocab-answer-prompt, .vocab-answer-action { display: none; }
   .vocab-meaning[hidden] { display: inline !important; }
-  .vocab-answer { background: transparent !important; padding: 0; }
+  .vocab-answer { background: transparent !important; border: 0; padding: 0; }
   .vocab-table tr { break-inside: avoid; }
   .vocab-word { font-size: 13pt; }
 }
