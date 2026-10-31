@@ -156,12 +156,13 @@ function toggleTranslations() {
 .vocab-switch-state { min-width: 25px; color: var(--vp-c-text-2); font-size: 11px; font-weight: 400; }
 .vocab-revealed { color: var(--vp-c-text-2); font-size: 12px; font-variant-numeric: tabular-nums; }
 .vocab-table { display: table; width: 100%; table-layout: fixed; margin: 0 !important; border-collapse: collapse; font-size: 16px; }
-.vocab-table thead th { background: var(--vp-c-bg-soft); padding: 10px 14px; font-size: 12px; font-weight: 600; color: var(--vp-c-text-2); text-align: left; }
+.vocab-table thead th { background: var(--vp-c-bg-soft); padding: 10px 14px; font-size: 12px; font-weight: 600; color: var(--vp-c-text-1); text-align: left; }
 .vocab-table th, .vocab-table td { border: 0; border-bottom: 1px solid var(--vp-c-divider); vertical-align: middle; }
 .vocab-table thead th:first-child { width: 48%; }
 .vocab-table tbody tr { background: transparent; border: 0; }
+.vocab-table tbody th, .vocab-table tbody td { background: var(--vp-c-bg); color: var(--vp-c-text-1); }
 .vocab-table tbody th { padding: 14px; text-align: left; font-weight: 500; }
-.vocab-word-number { display: inline-block; width: 34px; margin-right: 8px; vertical-align: baseline; font-size: 11px; font-weight: 400; color: var(--vp-c-text-2); font-variant-numeric: tabular-nums; }
+.vocab-word-number { display: inline-block; width: 34px; margin-right: 8px; vertical-align: baseline; font-size: 11px; font-weight: 400; color: var(--vp-c-text-1); font-variant-numeric: tabular-nums; }
 .vocab-word { font-family: Arial, sans-serif; font-size: 20px; overflow-wrap: anywhere; }
 .vocab-table tbody td { padding: 6px 0 6px 8px; }
 .vocab-answer { display: block; width: 100%; min-height: 44px; padding: 8px 12px; border-radius: 6px; text-align: left; line-height: 1.7; }
