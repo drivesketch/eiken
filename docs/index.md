@@ -1,5 +1,5 @@
 ---
-description: 英検5級・4級の級別教材。各級の単語・熟語と、英文の音読・復習を選べます。
+description: 英検5級・4級・3級の級別教材。単語・熟語や、英文の音読・復習を選べます。
 pageClass: study-home
 sidebar: false
 outline: false
@@ -52,4 +52,17 @@ next: false
   </a>
 </div>
 
-<p class="study-hint">単語は25項目ずつ、訳を隠して答えてみよう。英文の短い暗唱は2〜4文ずつ。全文を丸暗記する必要はありません。</p>
+## 英検3級
+
+Sectionごとに、単語と熟語の意味を確かめます。
+
+<div class="study-card-grid">
+  <a class="study-card" href="./grade3/vocabulary.html">
+    <span class="study-card-top"><span class="study-grade">単語学習</span><span class="study-card-count">1,200項目</span></span>
+    <h3>単語・熟語</h3>
+    <p>単語900・熟語300。全12Sectionから選び、50項目ずつ練習できます。</p>
+    <span class="study-card-link">単語を練習する <span aria-hidden="true">→</span></span>
+  </a>
+</div>
+
+<p class="study-hint">単語は50項目ずつ、訳を隠して答えてみよう。英文の短い暗唱は2〜4文ずつ。全文を丸暗記する必要はありません。</p>

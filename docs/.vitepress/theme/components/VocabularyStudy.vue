@@ -6,8 +6,7 @@ type Group = { id: string; title: string; entries: Entry[] }
 const props = defineProps<{ groups: Group[] }>()
 
 const category = ref(props.groups[0]?.id ?? 'all')
-const query = ref('')
-const pageSize = ref(25)
+const pageSize = 50
 const page = ref(0)
 const revealed = ref(new Set<number>())
 
@@ -16,21 +15,14 @@ const categoryTitle = computed(() => props.groups.find(group => group.id === cat
 const categoryEntries = computed(() => category.value === 'all'
   ? allEntries.value
   : props.groups.find(group => group.id === category.value)?.entries ?? [])
-const normalize = (text: string) => text.normalize('NFKC').toLocaleLowerCase().trim()
-const filtered = computed(() => {
-  const terms = normalize(query.value).split(/\s+/).filter(Boolean)
-  return categoryEntries.value.filter(entry => {
-    const text = normalize(`${entry.id} ${entry.english} ${entry.meaning}`)
-    return terms.every(term => text.includes(term))
-  })
-})
-const pageCount = computed(() => Math.max(1, Math.ceil(filtered.value.length / pageSize.value)))
-const visible = computed(() => filtered.value.slice(page.value * pageSize.value, (page.value + 1) * pageSize.value))
-const rangeStart = computed(() => filtered.value.length ? page.value * pageSize.value + 1 : 0)
-const rangeEnd = computed(() => Math.min((page.value + 1) * pageSize.value, filtered.value.length))
+const pageCount = computed(() => Math.max(1, Math.ceil(categoryEntries.value.length / pageSize)))
+const visible = computed(() => categoryEntries.value.slice(page.value * pageSize, (page.value + 1) * pageSize))
+const rangeStart = computed(() => categoryEntries.value.length ? page.value * pageSize + 1 : 0)
+const rangeEnd = computed(() => Math.min((page.value + 1) * pageSize, categoryEntries.value.length))
 const revealedCount = computed(() => visible.value.filter(entry => revealed.value.has(entry.id)).length)
+const showTranslations = computed(() => visible.value.length > 0 && revealedCount.value === visible.value.length)
 
-watch([category, query, pageSize], () => {
+watch(category, () => {
   page.value = 0
   revealed.value = new Set()
 }, { flush: 'sync' })
@@ -41,8 +33,8 @@ function toggle(id: number) {
   next.has(id) ? next.delete(id) : next.add(id)
   revealed.value = next
 }
-function revealRange() {
-  revealed.value = new Set(visible.value.map(entry => entry.id))
+function toggleTranslations() {
+  revealed.value = showTranslations.value ? new Set() : new Set(visible.value.map(entry => entry.id))
 }
 </script>
 
@@ -53,7 +45,16 @@ function revealRange() {
       <span class="vocab-total">単語・熟語 <strong>{{ allEntries.length }}</strong> 項目</span>
     </div>
 
-    <div class="vocab-categories" role="group" aria-label="学習する分類">
+    <div v-if="groups.length > 4" class="vocab-category-picker">
+      <label for="vocab-category">学習する分類</label>
+      <select id="vocab-category" v-model="category">
+        <option v-for="group in groups" :key="group.id" :value="group.id">
+          {{ group.title }} · {{ group.entries[0]?.id }}–{{ group.entries[group.entries.length - 1]?.id }}
+        </option>
+        <option value="all">すべての分類 · {{ allEntries.length }}項目</option>
+      </select>
+    </div>
+    <div v-else class="vocab-categories" role="group" aria-label="学習する分類">
       <button v-for="group in groups" :key="group.id" type="button"
         :aria-pressed="category === group.id" @click="category = group.id">
         {{ group.title }} <span>{{ group.entries.length }}</span>
@@ -63,30 +64,11 @@ function revealRange() {
       </button>
     </div>
 
-    <div class="vocab-filters">
-      <div class="vocab-search">
-        <label for="vocab-query">単語を探す</label>
-        <div class="vocab-search-field">
-          <input id="vocab-query" v-model="query" type="search" placeholder="英語・日本語・番号で絞り込み"
-            autocomplete="off" aria-controls="vocab-table" />
-          <button v-if="query" type="button" class="vocab-clear" @click="query = ''">クリア</button>
-        </div>
-      </div>
-      <div class="vocab-page-size">
-        <label for="vocab-size">表示件数</label>
-        <select id="vocab-size" v-model.number="pageSize">
-          <option :value="25">25項目ずつ</option>
-          <option :value="50">50項目ずつ</option>
-          <option :value="allEntries.length">すべて表示</option>
-        </select>
-      </div>
-    </div>
-
     <div class="vocab-range">
       <div>
         <h2 class="vocab-category-title">{{ categoryTitle }}</h2>
         <p class="vocab-status" role="status" aria-live="polite">
-          {{ rangeStart }}–{{ rangeEnd }} / {{ filtered.length }} 項目<span v-if="query.trim()">（絞り込み中）</span>
+          {{ rangeStart }}–{{ rangeEnd }} / {{ categoryEntries.length }} 項目
         </p>
       </div>
       <div v-if="pageCount > 1" class="vocab-pagination" aria-label="上部の範囲切り替え">
@@ -94,7 +76,7 @@ function revealRange() {
         <label class="vocab-sr-only" for="vocab-page">学習する範囲</label>
         <select id="vocab-page" v-model.number="page">
           <option v-for="(_, i) in pageCount" :key="i" :value="i">
-            {{ i * pageSize + 1 }}–{{ Math.min((i + 1) * pageSize, filtered.length) }}
+            {{ i * pageSize + 1 }}–{{ Math.min((i + 1) * pageSize, categoryEntries.length) }}
           </option>
         </select>
         <button type="button" :disabled="page >= pageCount - 1" aria-label="次の範囲" @click="page++">→</button>
@@ -102,11 +84,13 @@ function revealRange() {
     </div>
 
     <div class="vocab-actions">
-      <div class="vocab-bulk-buttons">
-        <button class="vocab-primary" type="button" :disabled="!visible.length || revealedCount === visible.length"
-          @click="revealRange">この範囲の訳を表示</button>
-        <button type="button" :disabled="revealedCount === 0" @click="revealed = new Set()">訳を隠す</button>
-      </div>
+      <button type="button" class="vocab-translation-switch" role="switch"
+        :aria-checked="showTranslations" aria-labelledby="vocab-translation-label"
+        :disabled="!visible.length" @click="toggleTranslations">
+        <span id="vocab-translation-label">日本語訳を表示</span>
+        <span class="vocab-switch-track" aria-hidden="true"><span class="vocab-switch-thumb"></span></span>
+        <span class="vocab-switch-state" aria-hidden="true">{{ showTranslations ? 'ON' : 'OFF' }}</span>
+      </button>
       <span class="vocab-revealed" role="status" aria-live="polite">訳を表示 {{ revealedCount }} / {{ visible.length }}</span>
     </div>
 
@@ -130,12 +114,6 @@ function revealRange() {
         </tr>
       </tbody>
     </table>
-    <div v-else id="vocab-table" class="vocab-empty">
-      <p>見つかりませんでした。</p>
-      <p>別の言葉で探すか、「すべての分類」に切り替えてみましょう。</p>
-      <button type="button" @click="query = ''; category = 'all'">すべての単語に戻る</button>
-    </div>
-
     <nav v-if="pageCount > 1" class="vocab-bottom-pagination" aria-label="下部の範囲切り替え">
       <button type="button" :disabled="page === 0" @click="page--">← 前の{{ pageSize }}項目</button>
       <span>{{ page + 1 }} / {{ pageCount }}</span>
@@ -147,10 +125,10 @@ function revealRange() {
 
 <style scoped>
 .vocabulary-study { margin: 28px 0 32px; }
-.vocabulary-study button, .vocabulary-study select, .vocabulary-study input { font: inherit; }
+.vocabulary-study button, .vocabulary-study select { font: inherit; }
 .vocabulary-study button, .vocabulary-study select { cursor: pointer; }
 .vocabulary-study button { touch-action: manipulation; }
-.vocabulary-study :is(button, select, input):focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 3px; }
+.vocabulary-study :is(button, select):focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 3px; }
 .vocabulary-study button:disabled { cursor: default; opacity: .42; }
 .vocab-overview { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
 .vocab-eyebrow { color: var(--vp-c-brand-1); font-size: 12px; font-weight: 700; letter-spacing: .15em; }
@@ -160,24 +138,22 @@ function revealRange() {
 .vocab-categories button { display: flex; align-items: center; justify-content: space-between; gap: 8px; border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px 14px; text-align: left; font-size: 14px; background: var(--vp-c-bg); color: var(--vp-c-text-2); }
 .vocab-categories button span { font-size: 12px; font-variant-numeric: tabular-nums; opacity: .8; }
 .vocab-categories button[aria-pressed="true"] { border-color: var(--vp-c-brand-1); background: color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent); color: var(--vp-c-brand-1); font-weight: 700; }
-.vocab-filters { display: flex; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid var(--vp-c-divider); }
-.vocab-search { flex: 1; min-width: 0; }
-.vocab-filters label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600; color: var(--vp-c-text-2); }
-.vocab-search-field { display: flex; align-items: center; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg-soft); }
-.vocab-search-field input { width: 100%; min-width: 0; padding: 10px 12px; font-size: 14px; background: transparent; border-radius: 6px; }
-.vocab-search-field input::-webkit-search-cancel-button { display: none; }
-.vocab-search-field input::placeholder { color: var(--vp-c-text-2); opacity: 1; }
-.vocab-clear { padding: 8px; flex-shrink: 0; font-size: 12px !important; color: var(--vp-c-brand-1); }
-.vocab-page-size select, .vocab-pagination select { border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg-soft); padding: 10px 12px; font-size: 14px; }
+.vocab-category-picker { margin-bottom: 24px; }
+.vocab-category-picker label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600; color: var(--vp-c-text-2); }
+.vocab-category-picker select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg-soft); font-size: 16px; }
+.vocab-pagination select { border: 1px solid var(--vp-c-divider); border-radius: 6px; background: var(--vp-c-bg-soft); padding: 10px 12px; font-size: 14px; }
 .vocab-range { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 24px 0 16px; }
 .vocab-category-title { margin: 0 !important; padding: 0 !important; font-size: 19px; line-height: 1.5; letter-spacing: normal; }
 .vocab-status { margin: 4px 0 0 !important; font-size: 13px; color: var(--vp-c-text-2); font-variant-numeric: tabular-nums; }
 .vocab-pagination { display: flex; align-items: center; gap: 6px; }
 .vocab-pagination button { min-width: 36px; min-height: 42px; border: 1px solid var(--vp-c-divider); border-radius: 6px; }
 .vocab-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
-.vocab-bulk-buttons { display: flex; gap: 8px; }
-.vocab-bulk-buttons button, .vocab-empty button { padding: 9px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; font-size: 13px; font-weight: 600; }
-.vocab-bulk-buttons .vocab-primary { color: var(--vp-button-brand-text); background: var(--vp-c-brand-3); border-color: var(--vp-c-brand-3); }
+.vocab-translation-switch { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 4px 0; border-radius: 6px; font-size: 14px !important; font-weight: 600 !important; }
+.vocab-switch-track { display: inline-flex; align-items: center; flex-shrink: 0; width: 36px; height: 22px; padding: 3px; border: 1px solid var(--vp-c-text-3); border-radius: 999px; background: var(--vp-c-default-2); }
+.vocab-switch-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--vp-c-text-2); }
+.vocab-translation-switch[aria-checked="true"] .vocab-switch-track { border-color: var(--vp-c-brand-1); background: var(--vp-c-brand-1); }
+.vocab-translation-switch[aria-checked="true"] .vocab-switch-thumb { transform: translateX(14px); background: var(--vp-c-bg); }
+.vocab-switch-state { min-width: 25px; color: var(--vp-c-text-2); font-size: 11px; font-weight: 400; }
 .vocab-revealed { color: var(--vp-c-text-2); font-size: 12px; font-variant-numeric: tabular-nums; }
 .vocab-table { display: table; width: 100%; table-layout: fixed; margin: 0 !important; border-collapse: collapse; font-size: 16px; }
 .vocab-table thead th { background: var(--vp-c-bg-soft); padding: 10px 14px; font-size: 12px; font-weight: 600; color: var(--vp-c-text-2); text-align: left; }
@@ -198,14 +174,8 @@ function revealRange() {
 .vocab-bottom-pagination button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; }
 .vocab-bottom-pagination > span { color: var(--vp-c-text-2); font-variant-numeric: tabular-nums; }
 .vocab-footnote { font-size: 12px; color: var(--vp-c-text-2); margin: 16px 0 0 !important; }
-.vocab-empty { padding: 32px 16px; background: var(--vp-c-bg-soft); border-radius: 8px; text-align: center; }
-.vocab-empty p { font-size: 14px; margin: 0 0 12px; }
 .vocab-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 @media (max-width: 600px) {
-  .vocab-filters { gap: 10px; }
-  .vocab-search-field input { font-size: 16px; padding: 10px 8px; }
-  .vocab-search-field input::placeholder { font-size: 12px; }
-  .vocab-page-size select { padding: 10px 6px; }
   .vocab-categories button { padding: 10px; font-size: 12px; }
   .vocab-category-title { font-size: 16px; }
   .vocab-range { gap: 8px; flex-wrap: wrap; }
@@ -218,11 +188,10 @@ function revealRange() {
   .vocab-table thead th:first-child { width: 44%; }
   .vocab-table tbody td { padding-left: 6px; }
   .vocab-answer { font-size: 14px; padding: 8px; }
-  .vocab-bulk-buttons button { padding: 9px 10px; font-size: 12px; }
   .vocab-bottom-pagination button { padding: 8px; font-size: 12px; }
 }
 @media print {
-  .vocab-categories, .vocab-filters, .vocab-pagination, .vocab-actions, .vocab-bottom-pagination { display: none; }
+  .vocab-categories, .vocab-category-picker, .vocab-pagination, .vocab-actions, .vocab-bottom-pagination { display: none; }
   .vocab-answer-prompt { display: none; }
   .vocab-meaning[hidden] { display: inline !important; }
   .vocab-answer { background: transparent !important; padding: 0; }
