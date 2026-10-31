@@ -1,3 +1,4 @@
+import { paginateWorkbook } from './workbook-pages'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
@@ -7,6 +8,13 @@ export default defineConfig({
   // GitHub Actions supplies the actual Pages base path. Local previews use /.
   base: process.env.PAGES_BASE_PATH || '/',
   head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
+  markdown: {
+    config(md) {
+      md.core.ruler.before('normalize', 'workbook-pages', state => {
+        state.src = paginateWorkbook(state.src)
+      })
+    }
+  },
   themeConfig: {
     nav: [{ text: '教材一覧', link: '/' }, { text: '5級の復習', link: '/grade5/review' }, { text: '5級の単語', link: '/grade5/vocabulary' }, { text: '4級の復習', link: '/grade4/review' }, { text: '4級の単語', link: '/grade4/vocabulary' }],
     sidebar: [{ text: '教材', items: [
@@ -14,7 +22,8 @@ export default defineConfig({
       { text: '5級 基本文型・語法の復習', link: '/grade5/review' },
       { text: '5級 単語・熟語', link: '/grade5/vocabulary' },
       { text: '4級 基本文型・語法の復習', link: '/grade4/review' },
-      { text: '4級 単語・熟語', link: '/grade4/vocabulary' }
+      { text: '4級 単語・熟語', link: '/grade4/vocabulary' },
+      { text: '3級 単語・熟語', link: '/grade3/vocabulary' }
     ] }],
     outline: { level: [2, 2], label: 'このページの目次' },
     search: { provider: 'local' },
